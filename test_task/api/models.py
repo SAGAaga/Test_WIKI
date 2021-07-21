@@ -11,6 +11,10 @@ class Page(models.Model):
     def __str__(self):
         return self.title
 
+    def get_dict(self):
+        temp_dict = {'id': self.id, 'title': self.title, 'text': self.text}
+        return temp_dict
+
 # page versions
 
 
@@ -21,3 +25,8 @@ class Versions(models.Model):
 
     def __str__(self):
         return self.title
+
+    def get_dict(self):
+        temp_dict = {'id': self.id, 'title': self.title,
+                     'text': self.text, 'page_FK': self.page}
+        return temp_dict
