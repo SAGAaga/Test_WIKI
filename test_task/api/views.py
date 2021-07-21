@@ -1,4 +1,3 @@
-from django.db.models import query
 from django.http.response import HttpResponse, Http404
 from django.views import View
 from django.http import JsonResponse
@@ -9,17 +8,6 @@ from random import randint
 from django.views.decorators.csrf import csrf_exempt
 from django.db import IntegrityError
 from django.utils.datastructures import MultiValueDictKeyError
-
-
-""" class Index(View):
-    def get(self, *args, **kwargs):
-        if len(kwargs) == 0:
-            pages = serializers.serialize(
-                'json', Page.objects.all())
-            return JsonResponse(pages, safe=False)
-        elif len(kwargs) == 1:
-            pass
- """
 
 
 @csrf_exempt
